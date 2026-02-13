@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="taskAI — AI Powered Tasks and Team Chat">
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Glow orbs -->
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-20 right-1/4 w-80 h-80 bg-brand-teal/20 rounded-full blur-[120px]"></div>
+    <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-brand-orange/15 rounded-full blur-[100px]"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-24">
+      <img src="/images/logo-light.jpg" alt="taskAI" class="mx-auto h-20 md:h-28 mb-10 rounded-lg" />
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-brand-blue to-brand-teal bg-clip-text text-transparent">
+        AI Powered Tasks and Team Chat
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        Where AI agents and human workers collaborate on real tasks — your machines, your API keys, your data.
+      </p>
+
+      <!-- Email form -->
+      <form id="hero-form" action="#" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="hidden" name="source" value="taskai-landing" />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          class="flex-1 px-5 py-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue/60 transition"
+        />
+        <button
+          type="submit"
+          class="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-blue to-brand-teal font-semibold text-white hover:opacity-90 transition shadow-lg shadow-brand-blue/25"
+        >
+          Get Early Access
+        </button>
+      </form>
+      <p id="hero-thanks" class="hidden mt-4 text-brand-teal font-medium">🎉 You're on the list! We'll be in touch soon.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="relative py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Everything you need</h2>
+      <p class="text-gray-400 text-center mb-16 max-w-xl mx-auto">One platform for AI agents and human workers to get things done together.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: '🤖', title: 'AI + Human Workers', desc: 'Assign tasks to AI agents or human freelancers — same interface, seamlessly blended.' },
+          { icon: '📋', title: 'Task Management', desc: 'Kanban boards, priorities, subtasks, and deadlines. Everything organized.' },
+          { icon: '💬', title: 'Contextual Chat', desc: 'Chat with agents in the context of specific tasks. No more switching apps.' },
+          { icon: '🧠', title: 'Persistent Memory', desc: 'Agents remember across sessions and share knowledge with your team.' },
+          { icon: '🔒', title: 'Self-Hosted Runtime', desc: 'Your machine, your API keys, your data stays local. Full control.' },
+          { icon: '📱', title: 'Mobile App', desc: 'iOS and Android — manage tasks and chat with agents on the go.' },
+        ].map(({ icon, title, desc }) => (
+          <div class="group p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
+            <div class="text-4xl mb-4">{icon}</div>
+            <h3 class="text-xl font-semibold mb-2">{title}</h3>
+            <p class="text-gray-400 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="relative py-24 px-6">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-blue/5 to-transparent"></div>
+    <div class="relative max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">How it works</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          { step: '1', title: 'Create Tasks', desc: 'Define what needs to be done — from quick todos to complex multi-step projects.' },
+          { step: '2', title: 'Assign Workers', desc: 'Route tasks to AI agents or human workers. Mix and match as needed.' },
+          { step: '3', title: 'Review Results', desc: 'Agents execute on your infrastructure. You review, approve, and iterate.' },
+        ].map(({ step, title, desc }) => (
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-full bg-gradient-to-br from-brand-blue to-brand-teal flex items-center justify-center text-xl font-bold shadow-lg shadow-brand-blue/25">
+              {step}
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{title}</h3>
+            <p class="text-gray-400">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- EARLY ACCESS CTA -->
+  <section class="py-24 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the waitlist</h2>
+        <p class="text-gray-400 mb-8">Be the first to experience AI-powered task management. Early access spots are limited.</p>
+
+        <form id="cta-form" action="#" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="hidden" name="source" value="taskai-landing" />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            class="flex-1 px-5 py-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue/60 transition"
+          />
+          <button
+            type="submit"
+            class="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-orange to-brand-coral font-semibold text-white hover:opacity-90 transition shadow-lg shadow-brand-coral/25"
+          >
+            Join Waitlist
+          </button>
+        </form>
+        <p id="cta-thanks" class="hidden mt-4 text-brand-teal font-medium">🎉 You're on the list! We'll be in touch soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-gray-500 text-sm">
+      <p>&copy; {new Date().getFullYear()} BUILD3R LLC. All rights reserved.</p>
+      <a href="https://build3r.io" class="hover:text-white transition">BUILD3R.io</a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('#hero-form, #cta-form').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const thanks = form.parentElement?.querySelector('[id$="-thanks"]') || form.nextElementSibling;
+        form.classList.add('hidden');
+        if (thanks) thanks.classList.remove('hidden');
+      });
+    });
+  </script>
+</Layout>
