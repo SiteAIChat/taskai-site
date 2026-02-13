@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="taskAI — AI Powered Tasks and Team Chat">
+<Layout title="TaskAI — Stop juggling AI tools. Start assigning work.">
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Glow orbs -->
@@ -10,12 +10,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-brand-orange/15 rounded-full blur-[100px]"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-24">
-      <img src="/images/logo-light.png" alt="taskAI" class="mx-auto h-20 md:h-28 mb-10" />
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-brand-blue to-brand-teal bg-clip-text text-transparent">
-        AI Powered Tasks and Team Chat
+      <img src="/images/logo-light.png" alt="TaskAI" class="mx-auto h-20 md:h-28 mb-10" />
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-brand-blue to-brand-teal bg-clip-text text-transparent leading-tight">
+        Stop juggling AI tools.<br />Start assigning work.
       </h1>
       <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-        Where AI agents and human workers collaborate on real tasks — your machines, your API keys, your data.
+        TaskAI is the first workspace where you manage tasks, chat with AI, and collaborate with your team — all in one place. Think of it as a project manager that actually does the work.
       </p>
 
       <!-- Email form -->
@@ -39,20 +39,43 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- PROBLEM -->
+  <section class="relative py-24 px-6">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-coral/5 to-transparent"></div>
+    <div class="relative max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Sound familiar?</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+          <p class="text-lg font-medium text-white mb-3 italic">"I have 12 ChatGPT tabs open and none of them remember what I said yesterday."</p>
+          <p class="text-gray-400 leading-relaxed">You're copying context between tools, repeating yourself to AI, and losing track of what was decided where.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+          <p class="text-lg font-medium text-white mb-3 italic">"My AI can write a blog post, but I still have to manage every step myself."</p>
+          <p class="text-gray-400 leading-relaxed">AI is powerful in isolation — but without task management, you're still the bottleneck organizing all the pieces.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+          <p class="text-lg font-medium text-white mb-3 italic">"Half my team uses AI. The other half doesn't. Nothing connects."</p>
+          <p class="text-gray-400 leading-relaxed">Your workflow is split between humans and AI tools with no shared workspace. Handoffs are messy, context gets lost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section class="relative py-24 px-6">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Everything you need</h2>
-      <p class="text-gray-400 text-center mb-16 max-w-xl mx-auto">One platform for AI agents and human workers to get things done together.</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">One workspace. AI and humans. Real work getting done.</h2>
+      <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">TaskAI brings your tasks, your team, and your AI agents into one place — so you can focus on the work that matters.</p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { icon: '🤖', title: 'AI + Human Workers', desc: 'Assign tasks to AI agents or human freelancers — same interface, seamlessly blended.' },
-          { icon: '📋', title: 'Task Management', desc: 'Kanban boards, priorities, subtasks, and deadlines. Everything organized.' },
-          { icon: '💬', title: 'Contextual Chat', desc: 'Chat with agents in the context of specific tasks. No more switching apps.' },
-          { icon: '🧠', title: 'Persistent Memory', desc: 'Agents remember across sessions and share knowledge with your team.' },
-          { icon: '🔒', title: 'Self-Hosted Runtime', desc: 'Your machine, your API keys, your data stays local. Full control.' },
-          { icon: '📱', title: 'Mobile App', desc: 'iOS and Android — manage tasks and chat with agents on the go.' },
+          { icon: '📋', title: 'Task boards that actually work', desc: 'Kanban boards, priorities, deadlines, subtasks. Assign work to an AI agent or a team member — same board, same workflow.' },
+          { icon: '💬', title: 'Chat that\'s connected to your work', desc: 'Every task has a conversation. Ask your AI agent a question, give feedback, iterate — all in context. No more "let me find that thread."' },
+          { icon: '🧠', title: 'AI that remembers', desc: 'Your agents build knowledge over time. They remember your preferences, past decisions, and project context — so you\'re not starting from scratch every conversation.' },
+          { icon: '👥', title: 'Human + AI, side by side', desc: 'Assign a research task to AI. Hand the results to your copywriter. They collaborate in the same workspace. No separate tools, no lost context.' },
+          { icon: '📱', title: 'Works where you do', desc: 'Web app, iPhone, Android. Create tasks by voice, check in on progress during your commute, approve AI work from your phone.' },
+          { icon: '🔐', title: 'Your data stays yours', desc: 'AI runs on your infrastructure with your API keys. Nothing passes through servers you don\'t control. Full privacy, full ownership.' },
         ].map(({ icon, title, desc }) => (
           <div class="group p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
             <div class="text-4xl mb-4">{icon}</div>
@@ -68,13 +91,13 @@ import Layout from '../layouts/Layout.astro';
   <section class="relative py-24 px-6">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-blue/5 to-transparent"></div>
     <div class="relative max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">How it works</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Three steps to a smarter workflow</h2>
 
       <div class="grid md:grid-cols-3 gap-8">
         {[
-          { step: '1', title: 'Create Tasks', desc: 'Define what needs to be done — from quick todos to complex multi-step projects.' },
-          { step: '2', title: 'Assign Workers', desc: 'Route tasks to AI agents or human workers. Mix and match as needed.' },
-          { step: '3', title: 'Review Results', desc: 'Agents execute on your infrastructure. You review, approve, and iterate.' },
+          { step: '1', title: 'Create a task', desc: 'Describe what you need — "Write a proposal for the Henderson account" or "Research competitors in the Austin market." Quick text, voice note, or detailed brief.' },
+          { step: '2', title: 'Assign it', desc: 'Route it to an AI agent for instant work, a team member for the human touch, or both. TaskAI doesn\'t care who does the work — it cares that it gets done.' },
+          { step: '3', title: 'Review and ship', desc: 'AI delivers drafts, research, code, or analysis. You review, give feedback in the task chat, and iterate until it\'s right. Then move on to what\'s next.' },
         ].map(({ step, title, desc }) => (
           <div class="text-center">
             <div class="w-14 h-14 mx-auto mb-5 rounded-full bg-gradient-to-br from-brand-blue to-brand-teal flex items-center justify-center text-xl font-bold shadow-lg shadow-brand-blue/25">
@@ -92,8 +115,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-24 px-6">
     <div class="max-w-2xl mx-auto text-center">
       <div class="p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the waitlist</h2>
-        <p class="text-gray-400 mb-8">Be the first to experience AI-powered task management. Early access spots are limited.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to put AI to work?</h2>
+        <p class="text-gray-400 mb-8">Join the waitlist for early access. We're onboarding teams now — first come, first served.</p>
 
         <form id="cta-form" action="#" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
           <input type="hidden" name="source" value="taskai-landing" />
@@ -108,10 +131,11 @@ import Layout from '../layouts/Layout.astro';
             type="submit"
             class="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-orange to-brand-coral font-semibold text-white hover:opacity-90 transition shadow-lg shadow-brand-coral/25"
           >
-            Join Waitlist
+            Join the Waitlist
           </button>
         </form>
         <p id="cta-thanks" class="hidden mt-4 text-brand-teal font-medium">🎉 You're on the list! We'll be in touch soon.</p>
+        <p class="mt-4 text-gray-500 text-sm">Free to start. No credit card required.</p>
       </div>
     </div>
   </section>
